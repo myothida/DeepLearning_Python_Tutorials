@@ -44,4 +44,4 @@ The version output will help you confirm the system-installed CUDA version.
 
 #### **Step 3: Install the Right Version**
 
-![Install CUDA](imgs/install_cuda.png)  
+[Install CUDA](../imgs/install_cuda.png)  
