@@ -98,7 +98,8 @@ Git LFS will upload the large file(s) separately.
 ### **Error: Failed to Push Large File**
 - If the file was committed without LFS, remove it from Git history and recommit using LFS:
   ```bash
-  git rm --cached models/resNet50_model.pth
+  git rm --cached models/resNet50_model.pth # remove **model.pth from the models folder
+  git rm --cached *.md ## remove all files with the extension of *.md
   git commit -m "Remove large file from history"
   git push origin master
   ```

@@ -1,43 +1,13 @@
-### Electricity Dataset Description
+### Electricity Transformer Dataset (ETDataset)
 
-Download URL : https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014
+### Electricity Transformer Dataset (ETDataset)
 
-#### Dataset Characteristics
-- **Type**: Time-Series  
-- **Subject Area**: Computer Science  
-- **Associated Tasks**: Regression, Clustering  
-- **Feature Type**: Real  
+The ETDataset (ETT-small) is available for download from [https://github.com/zhouhaoyi/ETDataset](https://github.com/zhouhaoyi/ETDataset). It includes data from electricity transformers, such as load and oil temperature, collected over a period from July 2016 to July 2018. The datasets are preprocessed and stored as .csv files.
 
-#### Dataset Dimensions
-- **Number of Instances**: 370  
-- **Number of Features**: 140,256  
+##### Datasets included:
+- **ETT-small**: Data from 2 electricity transformers at 2 stations.
 
-#### Dataset Information
-The dataset contains electricity consumption data measured every 15 minutes in kilowatts (kW). It is structured such that each column represents a different client. The time-series data spans multiple years, with the following key points:  
+In the ETT-small dataset, each data point is recorded every minute (marked by m), and they were from two regions of a province in China, named ETT-small-m1 and ETT-small-m2, respectively. Each dataset contains:
+- 2 years * 365 days * 24 hours * 4 times per hour = 70,080 data points.
 
-###### Data Integrity
-- The dataset has no missing values.  
-
-###### Measurement Units
-- Values are recorded in kW. To convert to kilowatt-hours (kWh), divide each value by 4.  
-
-###### Client Information
-- Some clients were added after 2011, resulting in zeros for earlier periods.  
-
-###### Time Labels
-- Time is recorded in Portuguese local time.  
-- Each day consists of 96 measurements (24 hours × 4 intervals).  
-- Adjustments for daylight saving time:
-  - In March (when the time changes and a day has only 23 hours), all measurements between 1:00 AM and 2:00 AM are zero.  
-  - In October (when the time changes and a day has 25 hours), measurements between 1:00 AM and 2:00 AM aggregate the consumption of two hours.  
-
-#### Data Formatting
-- **File Format**: `.txt` saved in CSV format with a semicolon (`;`) as the delimiter.  
-- **First Column**: Contains date and time strings in the format `yyyy-mm-dd hh:mm:ss`.  
-- **Other Columns**: Contain float values representing electricity consumption in kilowatts.  
-
-#### Additional Information
-- The dataset is clean and ready for use in tasks like regression or clustering.  
-- Each column's data is sequential and can be used for modeling long-term consumption patterns.  
-
-This dataset is ideal for analyzing and forecasting electricity usage patterns, particularly for time-series modeling tasks.
+Additionally, hourly-level variants are provided for fast development (marked by h), i.e., ETT-small-h1 and ETT-small-h2. Each data point consists of 8 features, including the date of the point, the predictive value "oil temperature", and 6 different types of external power load features.
