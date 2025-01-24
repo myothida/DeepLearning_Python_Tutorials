@@ -45,3 +45,7 @@ The version output will help you confirm the system-installed CUDA version.
 #### **Step 3: Install the Right Version**
 
 [Install CUDA](../imgs/install_cuda.png)  
+
+```
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
