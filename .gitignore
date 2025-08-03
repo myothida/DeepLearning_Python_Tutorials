@@ -2,3 +2,5 @@
 ./models
 ./layors
 ./logs
+./dbscan_demo_images
+./imgs
